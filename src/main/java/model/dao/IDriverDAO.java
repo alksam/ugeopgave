@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IDriverDAO {
     // Driver
-    void saveDriver(String name, String surname, BigDecimal salary);
+    String saveDriver(String name, String surname, BigDecimal salary);
     driver getDriverById(String id);
     driver updateDriver(driver driver);
     void deleteDriver(String id);
