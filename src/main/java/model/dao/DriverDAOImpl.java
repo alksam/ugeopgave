@@ -1,27 +1,14 @@
 package model.dao;
-
-<<<<<<< HEAD
-=======
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
->>>>>>> 84fe40a (her mi projekt bb)
 import model.driver;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-public class DriverDAOImpl implements IDriverDAO{
-<<<<<<< HEAD
-    @Override
-    public void saveDriver(String name, String surname, BigDecimal salary) {
+public class DriverDAOImpl implements IDriverDAO {
 
-    }
-
-    @Override
-    public driver getDriverById(String id) {
-        return null;
-=======
 
     private static EntityManagerFactory emf;
     private static DriverDAOImpl driverDAO;
@@ -63,7 +50,7 @@ public class DriverDAOImpl implements IDriverDAO{
             return em.find(driver.class, id);
         }
 
->>>>>>> 84fe40a (her mi projekt bb)
+
     }
 
     @Override
@@ -103,14 +90,13 @@ public class DriverDAOImpl implements IDriverDAO{
 
     @Override
     public driver fetchDriverWithHighestSalary() {
-<<<<<<< HEAD
-        return null;
-=======
+
+
         try (EntityManager em = emf.createEntityManager())
         {
             TypedQuery<driver> query = em.createQuery("SELECT d FROM driver d ORDER BY d.Salary DESC", driver.class);
             return query.setMaxResults(1).getSingleResult();
         }
->>>>>>> 84fe40a (her mi projekt bb)
+
     }
 }

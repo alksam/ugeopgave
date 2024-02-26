@@ -22,6 +22,7 @@ public class truck {
     private int capacity ;
     @Column(name = "regisrationnm", length = 12)
     private  int registrationnumber ;
+    private boolean available;
     @OneToOne
     private driver driverr ;
 
@@ -39,5 +40,7 @@ public class truck {
     }
 
 
-
+    public void removeDriver(driver driver) {
+        this.driverr = null;
+    }
 }

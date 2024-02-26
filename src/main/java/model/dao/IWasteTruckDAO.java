@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IWasteTruckDAO {
     // WasteTruck
-    void saveWasteTruck(String brand, String registrationNumber, int capacity);
+    int saveWasteTruck(String brand, int registrationNumber, int capacity);
     truck getWasteTruckById(int id);
     void setWasteTruckAvailable(truck wasteTruck, boolean available);
     void deleteWasteTruck(int id);
